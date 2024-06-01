@@ -1,0 +1,91 @@
+html{
+    background-color: #2C2F33;
+    overflow-y: hidden !important;
+}
+
+.userInfo{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.image{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+#client-user-username{
+    margin-top: 40px;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.userInfo p{
+    font-size: 25px;
+    display: inline-block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#guildID{
+    background-color: #23272A !important;
+    color: white;
+    width: 350px;
+    border: 0px solid;
+}
+
+#guildID::placeholder{
+    color: white !important;
+    font-size: 17px;
+}
+
+.searchFieldBar{
+    margin-top: 50px;
+}
+
+.searchFieldBar input{
+    background-color: #7289DA !important;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+.input:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.userInfo{
+    width: max-content !important;
+}
+
+.actionList {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eachAction {
+    display: inline-block;
+    width: fit-content;
+}
+
+.eachAction input{
+    margin-top: 3px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    background-color: #7289DA !important;
+}
+
+.label {
+    color: white !important;
+}
+
+#banbtn {
+    background-color: red !important;
+}

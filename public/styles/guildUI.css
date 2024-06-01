@@ -1,0 +1,154 @@
+html{
+    background-color: #2C2F33;
+    margin: 0;
+    padding: 0;
+}
+
+.userInfo{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.image{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+#client-user-username{
+    margin-top: 17px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.userInfo p{
+    font-size: 25px;
+    display: inline-block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#guildID{
+    background-color: #2C2F33 !important;
+    color: white;
+    width: 350px;
+    border: 0px solid;
+}
+
+#guildID::placeholder{
+    color: white !important;
+    font-size: 17px;
+}
+
+.searchFieldBar{
+    margin-top: 50px;
+}
+
+.searchFieldBar input{
+    background-color: #7289DA !important;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+.input:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.userInfo{
+    width: max-content !important;
+}
+
+.actionList {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.eachAction {
+    display: inline;
+}
+
+.eachAction input{
+    margin-top: 3px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    background-color: #7289DA !important;
+}
+
+.label {
+    color: white !important;
+}
+
+#changeServerName, #changeBotName {
+    background-color: #7289DA !important
+}
+
+#banMember, #deleteRole {
+    background-color: red !important;
+}
+
+#kickMember, #changeRoleName {
+    background-color: #F5CA00 !important;
+}
+
+#createRole {
+    background-color: rgb(67, 181, 129) !important;
+}
+
+#deleterolebtn {
+    background-color: red !important;
+}
+
+.sections {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1.2px solid black;
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: #23272A;
+}
+
+.dots{
+    display: list-item;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.dots .dot{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;   
+}
+
+.dots p {
+    color: white;
+    display: inline-block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+button{
+    margin-top: 2px;
+}
+
+.notification {
+    width: 300px;
+    float: right;
+    margin-right: 60px;
+}

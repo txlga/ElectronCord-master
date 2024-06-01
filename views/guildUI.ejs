@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "../public/scripts/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="../public/styles/guildUI.css">
+    <title>ElectronCord @ <%= guild.name %></title>
+    
+</head>
+<body>
+    <% if(error) {%>
+        <div class="notification is-danger">
+            <button class="delete"></button>
+            <%= error %>
+        </div>
+    <% } else if (success) {%>
+        <div class="notification is-success">
+            <button class="delete"></button>
+            <%= success %>
+        </div>
+    <% }%>
+    
+    <div class="userInfo">
+        <figure class="image is-128x128">
+            <% if(guild.iconURL) { %>,
+                <img class="is-rounded" src="<%= guild.iconURL %>">
+            <% }else{  %>
+                <img class="is-rounded" src="https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-512.png">
+            <%  } %>
+            
+        </figure>
+        <p id ="client-user-username" style="font-size: 40px;"><%= guild.name %></p>
+    </div>
+
+    <div class="dots">
+        <span class = "dot" style="background-color: rgb(67, 181, 129)"></span>
+        <p><%= guild.members.filter(a => a.user.presence.status !== "offline").size %></p>
+        <span class = "dot" style="background-color: gray;"></span>
+        <p><%= guild.memberCount %></p>
+    </div>
+
+    <div class="actionList">
+        <div class="sections">
+            <div class="eachAction">
+                <label class="label">Change Server Name</label>
+                <div class="field">
+                    <input class="input" id= "guildID" type= "text" name="guildID" placeholder="New Server Name...">
+                    <button class="button is-primary" id="changeServerName" type="submit">Change</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="sections">
+            <div class="eachAction">
+                <div class="eachAction">
+                    <label class="label">Kick Member</label>
+                    <form action="http://localhost:3000/kick/<%= guild.id %>" method="get">
+                        <div class="field">
+                            <input class="input" id= "guildID" type= "text" name="userid" placeholder="User ID">
+                            <input class="input" id= "guildID" type= "text" name="reason" placeholder="Kick Reason...">
+                            <button class="button is-primary" id="kickMember" type="submit">Kick</button>
+                        </div>
+                    </form>
+                </div>
+
+                <label class="label">Ban Member</label>
+                <form action="http://localhost:3000/ban/<%= guild.id %>" method="get">
+                    <div class="field">
+                        <input class="input" id= "guildID" type= "text" name="userid" placeholder="User ID">
+                        <input class="input" id= "guildID" type= "text" name="reason" placeholder="Ban Reason...">
+                        <button class="button is-primary" id="banMember" type="submit">Ban</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="sections">
+            <div class="eachAction">
+                <label class="label">Create Role</label>
+                <div class="field">
+                    <input class="input" id= "guildID" type= "text" name="guildID" placeholder="Role Name">
+                    <input class="input" id= "guildID" type= "text" name="guildID" placeholder="Reason">
+                    <button class="button is-primary" id = "createRole" type="submit">Create</button>
+                </div>
+            </div>
+
+            <div class="eachAction">
+                <label class="label">Change Role Name</label>
+                <div class="field">
+                    <input class="input" id= "guildID" type= "text" name="guildID" placeholder="Role ID">
+                    <input class="input" id= "guildID" type= "text" name="guildID" placeholder="New Name...">
+                    <button class="button is-primary" id="changeRoleName" type="submit">Change</button>
+                </div>
+            </div>
+
+            <div class="eachAction">
+                <label class="label">Delete Role</label>
+                <div class="field">
+                    <input class="input" id= "guildID" type= "text" name="guildID" placeholder="Role ID">
+                    <input class="input" id= "guildID" type= "text" name="guildID" placeholder="Deletion Reason">
+                    <button class="button is-primary" id="deleteRole" type="submit">Delete</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

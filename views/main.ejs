@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "../public/scripts/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="../public/styles/main.css">
+    <title>ElectronCord</title>
+    
+</head>
+<body>
+    <div class="userInfo">
+        <figure class="image is-128x128">
+            <% if(client.user.avatarURL) { %>,
+                <img class="is-rounded" src="<%= client.user.avatarURL %>">
+            <% }else{  %>
+                <img class="is-rounded" src="https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-512.png">
+            <%  } %>
+        </figure>
+        <p id ="client-user-username" style="font-size: 40px;"><%= client.user.username %></p>
+        <p id ="client-user-disciminator" style="color: #7289DA">#<%= client.user.discriminator %></p>
+
+        <form action="/guilds" method="post">
+        <div class="searchFieldBar">
+            <div class="field">
+                <input class="input" id= "guildID" type= "text" name="guildID" placeholder="Input a Guild ID...">
+                <input class="button is-primary" type="submit" placeholder="Send">
+            </div>
+        </div>
+        </form>
+    </div>
+    
+</body>
+</html>
